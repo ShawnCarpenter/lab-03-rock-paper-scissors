@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>"The Rock", Paper, Snikt!</title>
+</head>
+
+<body>
+<header>
+    <h1>"The Rock", Paper, Snikt!</h1>
+</header> 
+   <main>
+       <div class="instructions">
+            <h2>Time to play a game!</h2>
+            <ul>
+                <li>Choose either "The Rock", Paper, or Snikt! and click the [Throw] button.</li>
+                <li>The computer will make a random choice to play against you.</li>
+                The winner is determined by the following rules:
+                <ul>
+                    <li>If the players both choose the same the match is a draw.</li> 
+                    <li>"The Rock" beats Snikt!</li>
+                    <li>Paper beats "The Rock"</li>
+                    <li>Snikt! beats Paper</li>
+                </ul>
+            </ul>
+       </div>
+       <div class="game" id="game" >
+           <div class="board" id="board">
+            <label>
+                <input type="radio" name="ro-sham-bo" id="rock">
+                <img src="./assets/Dwayne_Johnson_2_2013.jpg" alt="The Rock">
+            </label>
+            <label>
+                <input type="radio" name="ro-sham-bo" id="paper">
+                <img src="./assets/newspaper.jpg" alt="paper">
+            </label>
+            <label>
+                <input type="radio" name="ro-sham-bo" id="scissors">
+                <img src="./assets/Wolverine_AKA_James__Logan__Howlett.png" alt="snikt!">
+            </label>
+            <div id="button-container">
+                <button id="throw">Throw</button> 
+            </div>   
+               
+           </div>
+           <div class="scores" id="scores">
+                <section id="current-round-score">
+                    <h3>Current Round:</h3>
+                    <div class="current-round" id="computer-move"></div>
+                    <div class="current-round" id="player-move"></div>
+                    <div class="current-round" id="winner"></div>
+               </section>
+               <section id="wins">
+                   <h3>Wins</h3>
+               </section>
+               <section id="losses">Losses</section>
+               <section id="draws">Draws</section>
+           </div>
+
+       </div>
+   </main>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
