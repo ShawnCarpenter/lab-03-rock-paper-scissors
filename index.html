@@ -34,15 +34,15 @@
        <div class="game" id="game" >
            <div class="board" id="board">
             <label>
-                <input type="radio" name="ro-sham-bo" id="rock">
+                <input type="radio" name="ro-sham-bo" id="the-rock">
                 <img src="./assets/Dwayne_Johnson_2_2013.jpg" alt="The Rock">
             </label>
             <label>
-                <input type="radio" name="ro-sham-bo" id="paper">
+                <input type="radio" name="ro-sham-bo" id="paper" checked>
                 <img src="./assets/newspaper.jpg" alt="paper">
             </label>
             <label>
-                <input type="radio" name="ro-sham-bo" id="scissors">
+                <input type="radio" name="ro-sham-bo" id="snikt">
                 <img src="./assets/Wolverine_AKA_James__Logan__Howlett.png" alt="snikt!">
             </label>
             <div id="button-container">
@@ -53,19 +53,34 @@
            <div class="scores" id="scores">
                 <section id="current-round-score">
                     <h3>Current Round:</h3>
-                    <div class="current-round" id="computer-move"></div>
-                    <div class="current-round" id="player-move"></div>
-                    <div class="current-round" id="winner"></div>
+                    <div class="current-round">
+                        Computer Move: <span id="computer-move">
+                        </span>
+                    </div>
+                    <div class="current-round">Player Move: <span id="player-move"></span> </div>
+                    <div class="current-round">Winner: <span id="winner"></span></div>
                </section>
-               <section id="wins">
+               <section id="total-box">
+                <h3>Total Games: </h3>
+                <span id="total-games">0</span>
+            </section>
+               <section id="wins-box">
                    <h3>Wins</h3>
+                   <span id="wins">0</span>
                </section>
-               <section id="losses">Losses</section>
-               <section id="draws">Draws</section>
+               <section id="losses-box">
+                <h3>Losses</h3>
+                <span id="losses">0</span>
+               </section>
+               <section id="draws-box">
+                <h3>Draws</h3>
+                <span id="draws">0</span>
+               </section>
            </div>
 
        </div>
    </main>
+   <a href="./test/index.html"><h1>Run tests</h1></a>
     <script type="module" src="app.js"></script>
 </body>
 
