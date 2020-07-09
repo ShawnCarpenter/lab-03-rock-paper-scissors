@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>"The Rock", Paper, Snikt!</title>
+</head>
+
+<body>
+<header>
+    <h1>"The Rock", Paper, Snikt!</h1>
+</header> 
+   <main>
+       <div class="instructions">
+            <h2>Time to play a game!</h2>
+            <ol>
+                <li>Choose either "The Rock", Paper, or Snikt! and click the [Throw] button.</li>
+                <li>The computer will make a random choice to play against you.</li>
+                <li>The winner is determined by the following rules:</li>
+                <ul>
+                    <li>If the players both choose the same the match is a draw.</li> 
+                    <li>"The Rock" beats Snikt!</li>
+                    <li>Paper beats "The Rock"</li>
+                    <li>Snikt! beats Paper</li>
+                </ul>
+            </ol>
+       </div>
+       <div class="game" id="game" >
+           <div class="board" id="board">
+            <div class="throws">
+                <label>
+                    <input type="radio" name="ro-sham-bo" id="the-rock">
+                    <img src="./assets/the_rock.jpg" alt="The Rock">
+                </label>
+                <label>
+                    <input type="radio" name="ro-sham-bo" id="paper" checked>
+                    <img src="./assets/newspaper.jpg" alt="paper">
+                </label>
+                <label>
+                    <input type="radio" name="ro-sham-bo" id="snikt">
+                    <img src="./assets/Wolverine.jpg" alt="snikt!">
+                </label>
+            </div>
+            <div class="button-container">
+                <button id="throw">Throw</button> 
+            </div>   
+               
+           </div>
+           <div class="scores" id="scores">
+                <section class="current-round-score">
+                    <div class="current-round top-row"><h3>Current Round:</h3></div>
+                    <div class="current-round bottom-row">
+                        Computer Move: <span id="computer-move">
+                        </span>
+                    </div>
+                    <div class="current-round bottom-row">Player Move: <span id="player-move"></span> </div>
+                    <div class="current-round bottom-row">Winner: <span id="winner"></span></div>
+               </section>
+               <section class="total-box">
+                <h3>Total Games: </h3>
+                <span id="total-games">0</span>
+               </section>
+               <section class="wins-box">
+                   <h3>Wins</h3>
+                   <span id="wins">0</span>
+               </section>
+               <section class="losses-box">
+                <h3>Losses</h3>
+                <span id="losses">0</span>
+               </section>
+               <section class="draws-box">
+                <h3>Draws</h3>
+                <span id="draws">0</span>
+               </section>
+           </div>
+           <div class="about">
+               <h2>Why, "The Rock", Paper, Snikt!?</h2>
+               <p>The bad book review podcast <a href="http://www.frowl.org/worstbestsellers/">"The Worst Best Sellers" </a> has a game they play with their guests where one of the hosts says what Dwayne 'The Rock' Johnson would do if he was a character in the book, the otheer host says what Wolverine would do. The guest then needs to choose between 'The Rock' Wolverine (Snikt!) or paper (Leave the book alone).</p>
+               <p>Anyway, it was amusing, you should listen to The Worst Bestsellers, they're pretty funny.</p>
+           </div>
+
+       </div>
+   </main>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
