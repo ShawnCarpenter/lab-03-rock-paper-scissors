@@ -3,18 +3,27 @@ import { getRandomThrow, compareResult } from './rpsUtils.js';
 
 const playButton = document.querySelector('#throw');
 
+const winsLabel = document.querySelector('#wins');
+const lossesLabel = document.querySelector('#losses');
+const drawsLabel = document.querySelector('#draws');
+const totalGamesLabel = document.querySelector('#total-games');
+
 // initialize state
 let wins = 0;
 let draws = 0;
 let totalGames = 0;
 // set event listeners to update state and DOM
 
+function updateScoreboard(wins, draws, games) {
+    winsLabel.textContent = wins;
+    drawsLabel.textContent = draws;
+    lossesLabel.textContent = totalGames - (wins + draws);
+    totalGamesLabel.textContent = games;
+}
+
 playButton.addEventListener('click', () => {
     // DOM Get elements
-    const winsLabel = document.querySelector('#wins');
-    const lossesLabel = document.querySelector('#losses');
-    const drawsLabel = document.querySelector('#draws');
-    const totalGamesLabel = document.querySelector('#total-games');
+
     
     const playerMoveLabel = document.querySelector('#player-move');
     const computerMoveLabel = document.querySelector('#computer-move');
@@ -40,8 +49,6 @@ playButton.addEventListener('click', () => {
             break;        
     }
     totalGames++;
-    winsLabel.textContent = wins;
-    drawsLabel.textContent = draws;
-    lossesLabel.textContent = totalGames - (wins + draws);
-    totalGamesLabel.textContent = totalGames;
+    updateScoreboard(wins, draws, totalGames);
+    
 });

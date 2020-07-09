@@ -100,10 +100,10 @@ button {
 .current-round-score {
     grid-area: 1 / 1 / 2 / 3 ;
     display: grid;
+    justify-content: stretch;
 }
 .current-round {
-    /* border:1px solid var(--blue-bell) ; */
-    border-radius: 10px;
+    border-bottom:1px solid var(--blue-bell) ;
     padding: 10px;    
 }
 
@@ -112,7 +112,8 @@ button {
 }
 
 .bottom-row {
-    grid-area: auto;
+    /* grid-area: ; */
+    width:  230px;
 }
 
 .total-box {
